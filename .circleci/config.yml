@@ -32,7 +32,7 @@ jobs:
             - store_artifacts:
                 path: test_results
             - store_artifacts:
-                path: $CIRCLE_INTERNAL_TASK_DATA/circle-test-results/results.json
+                path: $CIRCLE_INTERNAL_TASK_DATA/circle-test-results
 workflows:
     build-and-test:
       jobs:
