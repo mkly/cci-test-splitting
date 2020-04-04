@@ -20,7 +20,7 @@ jobs:
                 then
                   TESTS_ARG='{'$(echo $ALL_TESTS | circleci tests split | tr ' ' ',')'}'
                   echo $TESTS_ARG
-                  MOCHA_FILE=./test_results/mocha.xml npx mocha $TESTS_ARG --reporter mocha-junit-reporter
+                  MOCHA_FILE=./test_results/mocha.xml npx mocha $TESTS_ARG --timeout 5000 --reporter mocha-junit-reporter
                 fi
             - store_test_results:
                 path: test_results
