@@ -13,7 +13,7 @@ jobs:
             - run: npm install
             - run: |
                 echo "-"
-                TESTS_TO_RUN=$(circleci tests glob "test/*" | circleci tests split)
+                TESTS_TO_RUN=$(circleci tests glob "test/*" | circleci tests split --split-by=timings)
                 NUM_TESTS=$(echo $TESTS_TO_RUN | wc -w)
                 echo $TESTS_TO_RUN
                 if [[ $TESTS_TO_RUN ]]
@@ -31,6 +31,8 @@ jobs:
                 path: test_results
             - store_artifacts:
                 path: test_results
+            - store_artifacts:
+                path: $CIRCLE_INTERNAL_TASK_DATA/circle-test-results/results.json
 workflows:
     build-and-test:
       jobs:
