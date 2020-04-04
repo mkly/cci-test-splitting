@@ -14,7 +14,7 @@ jobs:
             - run: |
                 ALL_TESTS=$(circleci tests glob "test/*")
                 TESTS_TO_RUN=$(echo $ALL_TESTS | circleci tests split)
-                if [ $TESTS_TO_RUN ]
+                if [[ $TESTS_TO_RUN ]]
                 then
                   TESTS_ARG='{'$(echo $ALL_TESTS | circleci tests split | tr ' ' ',')'}'
                   MOCHA_FILE=./test_results/mocha.xml npx mocha $TESTS_ARG --reporter mocha-junit-reporter
