@@ -11,6 +11,10 @@ jobs:
           steps:
             - run: npm install
             - run: npm test
+          - store_test_results:
+              path: test-results.xml
+          - store_artifacts:
+              path: test_results.xml
 workflows:
     build-and-test:
       jobs:
