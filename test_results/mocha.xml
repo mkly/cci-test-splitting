@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.0000" tests="6" failures="0">
+  <testsuite name="Root Suite" timestamp="2020-04-04T20:12:53" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Class tests" timestamp="2020-04-04T20:12:53" tests="0" file="/Users/mikelay/repos/cci-test-splitting/test/class_test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="One" timestamp="2020-04-04T20:12:53" tests="1" file="/Users/mikelay/repos/cci-test-splitting/test/class_test.js" time="0.0000" failures="0">
+    <testcase name="Class tests One onerun()" time="0.0000" classname="onerun()">
+    </testcase>
+  </testsuite>
+  <testsuite name="Two" timestamp="2020-04-04T20:12:53" tests="1" file="/Users/mikelay/repos/cci-test-splitting/test/class_test.js" time="0.0000" failures="0">
+    <testcase name="Class tests Two tworun()" time="0.0000" classname="tworun()">
+    </testcase>
+  </testsuite>
+  <testsuite name="Three" timestamp="2020-04-04T20:12:53" tests="1" file="/Users/mikelay/repos/cci-test-splitting/test/class_test.js" time="0.0000" failures="0">
+    <testcase name="Class tests Three threerun()" time="0.0000" classname="threerun()">
+    </testcase>
+  </testsuite>
+  <testsuite name="Function tests" timestamp="2020-04-04T20:12:53" tests="3" file="/Users/mikelay/repos/cci-test-splitting/test/function_test.js" time="0.0000" failures="0">
+    <testcase name="Function tests one()" time="0.0000" classname="one()">
+    </testcase>
+    <testcase name="Function tests two()" time="0.0000" classname="two()">
+    </testcase>
+    <testcase name="Function tests three()" time="0.0000" classname="three()">
+    </testcase>
+  </testsuite>
+</testsuites>

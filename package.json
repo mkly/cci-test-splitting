@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test --reporter mocha-junit-reporter"
+    "test": "MOCHA_FILE=./test_results/mocha.xml mocha test --reporter mocha-junit-reporter"
   },
   "keywords": [],
   "author": "Mike Lay <mike@mkly.io>",
