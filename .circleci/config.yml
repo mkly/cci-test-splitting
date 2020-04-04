@@ -13,7 +13,7 @@ jobs:
             - run: npm install
             - run: |
                 ALL_TESTS=$(circleci tests glob "test/*")
-                TESTS_TO_RUN='('$(echo $ALL_TESTS | circleci tests split | tr '\n' '|')')'
+                TESTS_TO_RUN='{'$(echo $ALL_TESTS | circleci tests split | tr ' ' ',')'}'
                 MOCHA_FILE=./test_results/mocha.xml npx mocha $TESTS_TO_RUN --reporter mocha-junit-reporter
             - store_test_results:
                 path: test_results
