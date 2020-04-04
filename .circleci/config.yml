@@ -11,7 +11,7 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm install
-            - run: MOCHA_FILE=./test_results/mocha.xml mocha test --reporter mocha-junit-reporter
+            - run: MOCHA_FILE=./test_results/mocha.xml npx mocha test --reporter mocha-junit-reporter
             - store_test_results:
                 path: test_results
             - store_artifacts:
