@@ -13,7 +13,7 @@ jobs:
             - run: npm install
             - run: |
                 echo "-"
-                TESTS_TO_RUN=$(circleci tests glob $(pwd)"/test/*" | circleci tests split --split-by=timings --timings-type=testname)
+                TESTS_TO_RUN=$(circleci tests glob $(pwd)"/tests/*" | circleci tests split --split-by=timings)
                 NUM_TESTS=$(echo $TESTS_TO_RUN | wc -w)
                 echo $TESTS_TO_RUN
                 if [[ $TESTS_TO_RUN ]]
