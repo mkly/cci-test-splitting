@@ -14,7 +14,7 @@ jobs:
             - run: |
                 echo "-"
                 TESTS_TO_RUN=$(circleci tests glob "test/*" | circleci tests split)
-                NUM_TESTS=$(wc $TESTS_TO_RUN)
+                NUM_TESTS=$(echo $TESTS_TO_RUN | wc -w)
                 echo $TESTS_TO_RUN
                 if [[ $TESTS_TO_RUN ]]
                 then
