@@ -1,0 +1,16 @@
+{
+  "name": "cci-test-splitting",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test --reporter mocha-junit-reporter"
+  },
+  "keywords": [],
+  "author": "Mike Lay <mike@mkly.io>",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^7.1.1",
+    "mocha-junit-reporter": "^1.23.3",
+  }
+}
