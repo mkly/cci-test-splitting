@@ -5,12 +5,13 @@ jobs:
   build-and-test:
     executor:
       name: node/default
+    parallelism: 2
     steps:
       - checkout
       - node/with-cache:
           steps:
             - run: npm install
-            - run: npm test
+            - run: MOCHA_FILE=./test_results/mocha.xml mocha test --reporter mocha-junit-reporter
             - store_test_results:
                 path: test_results
             - store_artifacts:
