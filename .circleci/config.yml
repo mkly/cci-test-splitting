@@ -13,23 +13,7 @@ jobs:
             - run: npm install
             - run: |
                 echo "-"
-                TESTS_TO_RUN=$(circleci tests glob $(pwd)"/test/*" | circleci tests split --split-by=timings)
-                NUM_TESTS=$(echo $TESTS_TO_RUN | wc -w)
-                echo $TESTS_TO_RUN
-                if [[ $TESTS_TO_RUN ]]
-                then
-                  if (( $NUM_TESTS > 1 ))
-                  then
-                    TESTS_ARG='{'$(echo $TESTS_TO_RUN | tr ' ' ',')'}'
-                  else
-                    TEST_ARG=$TESTS_TO_RUN
-                  fi
-                  echo $TESTS_ARG
-                  MOCHA_FILE=./test_results/mocha.xml npx mocha $TESTS_ARG --timeout 5000 --reporter mocha-junit-reporter
-                fi
-            - run: |
-                echo "-"
-                TESTS_TO_RUN=$(circleci tests glob $(pwd)"/test/*" | circleci tests split --split-by=timings)
+                TESTS_TO_RUN=$(circleci tests glob $(pwd)"/test/*" | circleci tests split --split-by=timings --timings-type=classname)
                 NUM_TESTS=$(echo $TESTS_TO_RUN | wc -w)
                 echo $TESTS_TO_RUN
                 if [[ $TESTS_TO_RUN ]]
