@@ -11,4 +11,4 @@ describe("Function Slow tests", () =>
     it("two()", done =>
       map.call([
         setTimeout.bind(null, done, 3000),
-        equal.bind(null, two(), 2)], x => x()))], x => x))
+        equal.bind(null, two(), 3)], x => x()))], x => x))
