@@ -41,7 +41,7 @@ jobs:
                     TEST_ARG=$TESTS_TO_RUN
                   fi
                   echo $TESTS_ARG
-                  npx mocha $TESTS_ARG --timeout 5000 --reporter cci-mocha-reporter.js --reporter-options output=./test_results/cci_results.xml
+                  npx mocha $TESTS_ARG --timeout 5000 --reporter cci-mocha-reporter.js
             - store_test_results:
                 path: test_results
             - store_artifacts:
